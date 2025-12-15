@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure RAG System | Privacy-First AI</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="badge badge-secure" style="margin-bottom: 20px;">AI SECURITY DEMO</div>
+        <h1>Secure RAG System</h1>
+        <p class="subtitle">A demonstration of retrieval-augmented generation that strictly enforces data privacy through advanced prompt engineering.</p>
+        <a href="https://github.com/yourusername/secure_rag_system" class="cta-button">View on GitHub</a>
+    </header>
+
+    <div class="container">
+        
+        <div class="grid">
+            <div class="card">
+                <div class="badge badge-secure">Privacy Core</div>
+                <h3>Prompt Engineering</h3>
+                <p>The system uses strict system instructions to prevent the LLM from leaking PII (Personally Identifiable Information) like account numbers and salaries, even when it has access to the raw data.</p>
+            </div>
+            <div class="card">
+                <div class="badge badge-tech">Architecture</div>
+                <h3>RAG Pipeline</h3>
+                <p>Built with LangChain, ChromaDB, and Streamlit. It ingests documents, creates embeddings locally, and retrieves relevant context purely for analysis, not disclosure.</p>
+            </div>
+            <div class="card">
+                <div class="badge badge-tech">Analytics</div>
+                <h3>Safe Insights</h3>
+                <p>While specific data is blocked, the system empowers users to ask analytical questions (e.g., "Average transaction amount", "Spending trends") without compromising individual privacy.</p>
+            </div>
+        </div>
+
+        <section style="margin-top: 4rem;">
+            <h2>How It Works</h2>
+            <p style="margin-bottom: 2rem; color: #94a3b8;">The application ingests your sensitive documents (PDF/CSV) but puts a virtual guardrail between the data and the user.</p>
+            
+            <div class="grid">
+                <div class="card">
+                    <h3>1. Ingestion</h3>
+                    <p>Documents are uploaded, split into chunks, and embedded into a local vector store using HuggingFace embeddings.</p>
+                </div>
+                <div class="card">
+                    <h3>2. Guardrails</h3>
+                    <p>The System Prompt instructs the model: <em>"NEVER reveal Account Numbers. REFUSE if asked."</em></p>
+                </div>
+                <div class="card">
+                    <h3>3. Response</h3>
+                    <p>The model answers your question. If you asked for a restricted field, it politely refuses. If you asked for a summary, it computes it.</p>
+                </div>
+            </div>
+        </section>
+
+        <section style="margin-top: 4rem;">
+            <h2>Run It Locally</h2>
+            <p>Clone the repository and run the Streamlit app to test it yourself.</p>
+            
+            <div class="code-block">
+                git clone https://github.com/yourusername/secure_rag_system.git<br>
+                cd secure_rag_system<br>
+                pip install -r requirements.txt<br>
+                streamlit run app.py
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>Built for the Gemini Advanced Agentic Coding Challenge. This is a local demo.</p>
+    </footer>
+
+</body>
+</html>
